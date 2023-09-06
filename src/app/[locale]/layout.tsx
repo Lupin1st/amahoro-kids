@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation';
 import { createTranslator, NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
-// import Navigation from 'components/Navigation';
+import { MainNavigation } from '@/components/MainNavigation/MainNavigation';
+import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
+import { Box } from '@mui/material';
 
 type Props = {
   children: ReactNode;
@@ -40,8 +42,20 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
     <html className="h-full" lang={locale}>
       <body className="flex h-full flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {/* <Navigation /> */}
-          {children}
+          <ThemeRegistry>
+            <MainNavigation />
+            <Box
+              component="main"
+              sx={{
+                flexGrow: 1,
+                bgcolor: 'background.default',
+                p: 3,
+                pt: 0,
+              }}
+            >
+              {children}
+            </Box>
+          </ThemeRegistry>
         </NextIntlClientProvider>
       </body>
     </html>
