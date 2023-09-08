@@ -7,14 +7,6 @@ import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
 
-const images = [
-  {
-    url: '/buttons/photo_girls.jpg',
-    title: 'School',
-    width: '20%',
-  },
-];
-
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
   height: 200,
@@ -79,18 +71,28 @@ const ImageMarked = styled('span')(({ theme }) => ({
   transition: theme.transitions.create('opacity'),
 }));
 
-export default function Button() {
+
+
+const Buttons = ({
+  url,
+  title,
+  width,
+}: {
+  url: string;
+  title: string;
+  width: string;
+}) => {
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
-      {images.map((image) => (
+      { (
         <ImageButton
           focusRipple
-          key={image.title}
+          key={title}
           style={{
-            width: image.width,
+            width: width,
           }}
         >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+          <ImageSrc style={{ backgroundImage: `url(${url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <Image>
             <Typography
@@ -104,12 +106,13 @@ export default function Button() {
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
               }}
             >
-              {image.title}
+              {title}
               <ImageMarked className="MuiImageMarked-root" />
             </Typography>
           </Image>
         </ImageButton>
-      ))}
+    )}
     </Box>
   );
-}
+};
+export default Buttons;
