@@ -48,13 +48,14 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
               component="main"
               sx={{
                 flexGrow: 1,
-                bgcolor: 'background.default',
+                bgcolor: 'rgba(0, 0, 0, 0)', // Transparent background
                 p: 3,
                 pt: 0,
               }}
             >
               {children}
             </Box>
+            
           </ThemeRegistry>
         </NextIntlClientProvider>
       </body>
