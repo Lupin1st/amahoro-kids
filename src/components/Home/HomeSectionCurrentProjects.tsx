@@ -12,10 +12,6 @@ const HomeSectionCurrentProjects = () => {
                         title={t('button_current_projects')}
                         width="100%"></Buttons>
                 </div>
-
-            </div>
-
-            <div className="homeFlexContainer">
                 <div className="homeIntroContainer">
                     <div className="homeIntroBox">
                         <h3 className="border-b border-body-color border-opacity-10 py-4 px-8 text-lg font-semibold text-white dark:border-white dark:border-opacity-10 dark:text-white">
@@ -27,6 +23,7 @@ const HomeSectionCurrentProjects = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
