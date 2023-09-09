@@ -2,27 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.main_page {
-  background-color: rgba(225, 221, 203, 0.5); /* Red background with 50% opacity */
-  color: #000000; /* Text color */
-  
-  /* Padding and margin */
-  padding: 20px;
-  margin: 0px;
-   /* Font size and family */
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  width: 100%; /* Set the width of the div to 50% of its parent (the container) */
-  
-  /* Box shadow for a subtle 3D effect */
-  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.2);
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 120, 100, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@media (max-width: 800px) {
+  .homeFlexContainer {
+    flex-direction: column; 
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -41,7 +30,41 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+
+}
+
+.homeSectionIntroMainContainer {
+  background-image: url('/background/rwanda.jpg');
+  width: 100vw; 
+}
+
+.homeSectionCurrentProjectMainContainer {
   background-image: url('/background/background_2.jpg');
+  width: 100vw; 
+}
+
+.homeSectionLogo {
+  float: left; 
+}
+
+.homeIntroContainer {
+  margin: 20px;
+  width: 60%; /* Set the width of the div to 50% of its parent (the container) */
+}
 
 
+.homeIntroBox {
+  background-color: rgba(39, 39, 39, 0.282); /* Red background with 50% opacity */  
+  font-size: 16px;
+  color: rgb(255, 250, 239);
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  padding: 20px;
+}
+
+.homeFlexContainer {
+  display: flex; /* Use Flexbox to align divs horizontally */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 5%;
 }

@@ -49,7 +49,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
               sx={{
                 flexGrow: 1,
                 bgcolor: 'rgba(0, 0, 0, 0)', // Transparent background
-                p: 3,
+                p: 0,
                 pt: 0,
               }}
             >

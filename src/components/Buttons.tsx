@@ -6,10 +6,11 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import { blob } from 'stream/consumers';
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 200,
+  height: 250,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
@@ -52,22 +53,22 @@ const Image = styled('span')(({ theme }) => ({
 
 const ImageBackdrop = styled('span')(({ theme }) => ({
   position: 'absolute',
-  left: 0,
+  left: 5,
   right: 0,
   top: 0,
-  bottom: 0,
+  bottom: 5,
   backgroundColor: theme.palette.common.black,
-  opacity: 0.4,
+  opacity: 0.3,
   transition: theme.transitions.create('opacity'),
 }));
 
 const ImageMarked = styled('span')(({ theme }) => ({
   height: 3,
-  width: 18,
+  width: 120,
   backgroundColor: theme.palette.common.white,
   position: 'absolute',
   bottom: -2,
-  left: 'calc(50% - 9px)',
+  left: 'calc(50% - 60px)',
   transition: theme.transitions.create('opacity'),
 }));
 
@@ -99,6 +100,7 @@ const Buttons = ({
               component="span"
               variant="subtitle1"
               color="inherit"
+              fontSize={20}
               sx={{
                 position: 'relative',
                 p: 4,
@@ -108,6 +110,7 @@ const Buttons = ({
             >
               {title}
               <ImageMarked className="MuiImageMarked-root" />
+              
             </Typography>
           </Image>
         </ImageButton>

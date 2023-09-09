@@ -1,4 +1,13 @@
 {
+  "HomeSectionIntro": {
+    "title": "Wellcome on AMAHORO Kids (Children of the peace) sites",
+    "description": "Text about the organization and help in beautiful Rwanda.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "button_organization": "Who we are?",
+    "button_how_to_help": "How can you help?"
+  },
+  "HomeSectionCurrentProjects": {
+    "button_current_projects": "Current projects"
+  },
   "IndexPage": {
     "title": "next-intl example",
     "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
