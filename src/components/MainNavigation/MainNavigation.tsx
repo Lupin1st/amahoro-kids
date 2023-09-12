@@ -44,10 +44,6 @@ const MENU_ITEMS: MenuItem[] = [
     link: '/community',
     title: 'Community',
   },
-  {
-    link: '/galery',
-    title: 'Galery',
-  },
 ];
 
 export function MainNavigation() {
