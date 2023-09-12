@@ -1,29 +1,39 @@
 import Buttons from '@/components/Buttons';
+import Section from '@/components/Section/Section';
+
+
 import { useTranslations } from "next-intl";
 
 const HomeSectionCurrentProjects = () => {
     const t = useTranslations('HomeSectionCurrentProjects');
     return (
-        <div className="homeSectionCurrentProjectMainContainer">
+        <div className="homeSectionMainContainer">
+                <div className="homeSectionProjects">
             <div className="homeFlexContainer">
-                <div className="w-full px-4 lg:w-4/12">
-                    <Buttons
-                        url="buttons/photo_girls.jpg"
-                        title={t('button_current_projects')}
-                        width="100%"></Buttons>
+                <div className="w-full px-4 lg:w-3/9">
+                    <Section title={t('button_community')}
+                        paragraph={t('community_paragraph')}
+                        image="/labels/photo_2.jpg"
+                        link="/community"
+                    ></Section>
                 </div>
-                <div className="homeIntroContainer">
-                    <div className="homeIntroBox">
-                        <h3 className="border-b border-body-color border-opacity-10 py-4 px-8 text-lg font-semibold text-white dark:border-white dark:border-opacity-10 dark:text-white">
-                            {t('title')}
-                        </h3>
-                        <p>
-                            {t('description')}
-                        </p>
-                    </div>
+                <div className="w-full px-4 lg:w-3/9">
+                    <Section title={t('button_school')}
+                        paragraph={t('school_paragraph')}
+                        image="/labels/photo_4.jpg"
+                        link="/about"
+                    ></Section>
+                </div>
+                <div className="w-full px-4 lg:w-3/9">
+                    <Section
+                        title={t('button_current_projects')}
+                        paragraph={t('current_projects_paragraph')}
+                        image="/labels/photo_3.jpg"
+                        link="/projects"
+                    ></Section>
+                </div>
                 </div>
             </div>
-
         </div>
     );
 };
