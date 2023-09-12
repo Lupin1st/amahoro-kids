@@ -10,7 +10,7 @@ import { blob } from 'stream/consumers';
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 250,
+  height: 100,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
@@ -93,14 +93,16 @@ const Buttons = ({
             width: width,
           }}
         >
+
           <ImageSrc style={{ backgroundImage: `url(${url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
+
           <Image>
             <Typography
               component="span"
               variant="subtitle1"
               color="inherit"
-              fontSize={20}
+              fontSize={24}
               sx={{
                 position: 'relative',
                 p: 4,
@@ -108,9 +110,9 @@ const Buttons = ({
                 pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,
               }}
             >
-              {title}
+               {title}
               <ImageMarked className="MuiImageMarked-root" />
-              
+
             </Typography>
           </Image>
         </ImageButton>
