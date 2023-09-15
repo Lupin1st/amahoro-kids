@@ -1,0 +1,91 @@
+.mainContainer {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.sectionLogo {
+  float: left;
+}
+
+.titleContainer {
+  margin-top: 10%;
+}
+
+.introContainer {
+  margin-right: 2%;
+  width: 80%;
+}
+
+.introBox {
+  background-color: rgba(252, 252, 252, 0.505);
+  font-size: 22px;
+  color: rgb(59, 55, 45);
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  padding: 3%;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: left;
+  align-items: top center;
+  padding: 2%;
+}
+
+.videoContainer {
+  margin-top: 5%;
+  width: 40%;
+  right: 0;
+  top: 0;
+}
+
+h1 {
+  font-size: 72px;
+  font: semibold;
+  font-family: Georgia, serif;
+  letter-spacing: 5px;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    width: 100%;
+    margin-left: 0%;
+
+  }
+
+  .homeSectionProjects {
+    height: 100%;
+    margin-top: 10%;
+  }
+
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .introContainer {
+    width: 100%;
+    margin: 0;
+  }
+
+  .introBox {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .titleContainer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .videoContainer {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+    font: semibold;
+    font-family: Georgia, serif;
+    letter-spacing: 5px;
+  }
+}
