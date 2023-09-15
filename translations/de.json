@@ -30,8 +30,18 @@
     "HelpNowButtonText": "Jetzt Spenden"
   },
   "HomeIntro": {
-      "title": "AMAHORO Kids",
-      "title_2": "Children of the peace",
-       "description": "Text about the organization and help in beautiful Rwanda.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    }
+    "title": "AMAHORO Kids",
+    "title_2": "Children of the peace",
+    "description": "Text about the organization and help in beautiful Rwanda.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  "HomeBlocks": {
+    "title": "What is going on",
+    "description": "Text about the current projects. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "button_current_projects": "Current projects",
+    "button_community": "Community",
+    "button_school": "About School",
+    "school_paragraph": "Short text about the school.",
+    "community_paragraph": "Short text about the community.",
+    "current_projects_paragraph": "Text about the current projects."
+  }
 }
