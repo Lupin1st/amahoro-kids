@@ -2,6 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 
-export default function IndexPage() {
-  return <h1>Home</h1>;
+export default function AboutPage() {
+  return <h1>About</h1>;
 }

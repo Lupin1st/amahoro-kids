@@ -2,53 +2,17 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next-intl/client';
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Menu,
-  MenuItem,
-  Toolbar,
-  Typography,
-} from '@mui/material';
-import AdbIcon from '@mui/icons-material/Adb';
+import { AppBar, Box, Button, Container, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
+import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher';
 import Logo from './Logo';
-
-type MenuItem = {
-  link: string;
-  title: string;
-};
-
-const MENU_ITEMS: MenuItem[] = [
-  {
-    link: '/',
-    title: 'Home',
-  },
-  {
-    link: '/ruanda',
-    title: 'Ruanda',
-  },
-  {
-    link: '/projects',
-    title: 'Projekte',
-  },
-  {
-    link: '/about',
-    title: 'About',
-  },
-  {
-    link: '/community',
-    title: 'Community',
-  },
-];
+import { getNavigationLinks } from '../utils/menu';
 
 export function MainNavigation() {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
+
+  const menuItems = getNavigationLinks();
 
   const [anchorElementNavigation, setAnchorElementNavigation] = useState<null | HTMLElement>(null);
 
@@ -73,7 +37,7 @@ export function MainNavigation() {
           <Logo />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {MENU_ITEMS.map((item) => (
+            {menuItems.map((item) => (
               <Button
                 key={item.link}
                 onClick={() => navigateToPage(item.link)}
@@ -114,7 +78,7 @@ export function MainNavigation() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {MENU_ITEMS.map((item) => (
+              {menuItems.map((item) => (
                 <MenuItem key={item.link} onClick={() => navigateToPage(item.link)}>
                   <Typography textAlign="center">{item.title}</Typography>
                 </MenuItem>
