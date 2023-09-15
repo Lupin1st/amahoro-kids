@@ -1,7 +1,15 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import HomeIntro from "@/components/Sections/HomeIntro";
+
 
 export default function IndexPage() {
-  return <h1>Home</h1>;
+  const t = useTranslations('IndexPage');
+
+  return (
+  <>
+      <HomeIntro />
+  </>
+);
 }
