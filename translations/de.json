@@ -1,4 +1,12 @@
 {
+  "Title": "AmahoroKids - Friedenskinder",
+  "Navigation": {
+    "Links": "Links",
+    "Home": "Home",
+    "Rwanda": "Ruanda",
+    "Projects": "Projekte",
+    "About": "Über",
+    "Community": "Orden"
   "HomeSectionIntro": {
     "title": "AMAHORO Kids",
     "title_2": "(Children of the peace)",
@@ -28,33 +36,25 @@
     "title": "Etwas ist schief gelaufen!",
     "description": "<p>Es ist leider ein Problem aufgetreten.</p><p>Du kannst versuchen <retry>diese Seite neu zu laden</retry>.</p>"
   },
-  "NotFoundPage": {
-    "title": "Seite nicht gefunden",
-    "description": "Bitte überprüfe die Addressleiste deines Browsers oder verwende die Navigation um zu einer bekannten Seite zu wechseln."
+  "Projects": {
+    "Projects": "Projekte"
   },
-  "LocaleLayout": {
-    "title": "next-intl Beispiel"
+  "Contact": {
+    "Contact": "Kontakt"
   },
-  "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, de {Deutsch} en {Englisch} other {Unbekannt}}"
+  "Newsletter": {
+    "Newsletter": "Newsletter",
+    "SignUpForNewsletter": "Zu unserem Newsletter anmelden",
+    "EmailPlaceholder": "Email Adresse",
+    "Subscribe": "Anmelden"
   },
-  "Navigation": {
-    "home": "Start",
-    "about": "Über"
+  "SocialMedia": {
+    "SocialMedia": "Social Media",
+    "Facebook": "Facebook",
+    "Instagram": "Instagram"
   },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "title": "Dokumentation",
-        "description": "Erfahre mehr über next-intl in der offiziellen Dokumentation.",
-        "href": "https://next-intl-docs.vercel.app/"
-      },
-      "source": {
-        "title": "Quellcode",
-        "description": "Sieh dir den Quellcode dieses Beispiels auf GitHub an.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-next-13"
-      }
-    }
+  "HelpNow": {
+    "HelpForChildrenInRwanda": "Hilfe für Kinder in Ruanda",
+    "HelpNowButtonText": "Jetzt Spenden"
   }
 }
