@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation';
 import { createTranslator, NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
-import { MainNavigation } from '@/components/MainNavigation/MainNavigation';
+import { MainNavigation } from '@/components/Navigation/MainNavigation/MainNavigation';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 import { Box } from '@mui/material';
+import Footer from '@/components/Footer/Footer';
 
 type Props = {
   children: ReactNode;
@@ -31,7 +32,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
   const t = createTranslator({ locale, messages });
 
   return {
-    title: t('LocaleLayout.title'),
+    title: t('Title'),
   };
 }
 
@@ -55,6 +56,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
             >
               {children}
             </Box>
+            <Footer />
           </ThemeRegistry>
         </NextIntlClientProvider>
       </body>
