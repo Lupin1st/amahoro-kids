@@ -11,7 +11,7 @@ import { ProjectNavigation } from '../Navigation/ProjectNavigation/ProjectNaviga
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="footer-top">
+    <footer className="footer">
       <div className="bg-neutral-50">
         <div className="flex lg:flex-row flex-col p-5">
           <HelpNow />

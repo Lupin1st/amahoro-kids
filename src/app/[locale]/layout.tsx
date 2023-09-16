@@ -3,7 +3,6 @@ import { createTranslator, NextIntlClientProvider } from 'next-intl';
 import { ReactNode } from 'react';
 import { MainNavigation } from '@/components/Navigation/MainNavigation/MainNavigation';
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
-import { Box } from '@mui/material';
 import Footer from '@/components/Footer/Footer';
 
 type Props = {
@@ -45,17 +44,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeRegistry>
             <MainNavigation />
-            <Box
-              component="main"
-              sx={{
-                flexGrow: 1,
-                bgcolor: 'background.default',
-                p: 3,
-                pt: 0,
-              }}
-            >
-              {children}
-            </Box>
+            <main className="p-5">{children}</main>
             <Footer />
           </ThemeRegistry>
         </NextIntlClientProvider>
