@@ -4,7 +4,7 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next-intl/client';
 import { useState, useTransition } from 'react';
 import { supportedLanguages } from '../../../translations/constants';
-import { Box, Button, Menu, MenuItem, Typography } from '@mui/material';
+import { Button, Menu, MenuItem } from '@mui/material';
 
 export default function LanguageSwitcher() {
   const [anchorElementLanguageSwitcher, setAnchorElementLanguageSwitcher] =
@@ -31,9 +31,8 @@ export default function LanguageSwitcher() {
   const [isPending, startTransition] = useTransition();
 
   return (
-    <Box sx={{ flexGrow: 0 }}>
+    <>
       <Button
-        sx={{ my: 2, color: 'white', display: 'block' }}
         aria-controls="language-switcher"
         aria-haspopup="true"
         onClick={handleOpenLanguageMenu}
@@ -41,7 +40,7 @@ export default function LanguageSwitcher() {
         {currentLocale}
       </Button>
       <Menu
-        sx={{ mt: '45px' }}
+        sx={{ mt: '35px' }}
         id="language-switcher"
         anchorEl={anchorElementLanguageSwitcher}
         anchorOrigin={{
@@ -58,10 +57,10 @@ export default function LanguageSwitcher() {
       >
         {supportedLanguages.map((language) => (
           <MenuItem key={language} onClick={() => handleCloseLanguageMenu(language)}>
-            <Typography textAlign="center">{language.toUpperCase()}</Typography>
+            {language.toUpperCase()}
           </MenuItem>
         ))}
       </Menu>
-    </Box>
+    </>
   );
 }

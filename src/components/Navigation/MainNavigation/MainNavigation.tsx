@@ -1,14 +1,19 @@
 'use client';
 
+import './styles.css';
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next-intl/client';
-import { AppBar, Box, Button, Container, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
+import { Button, Divider, ListItemIcon, ListItemText, Menu, MenuItem } from '@mui/material';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import MenuIcon from '@mui/icons-material/Menu';
 import LanguageSwitcher from '../../LanguageSwitcher/LanguageSwitcher';
 import Logo from './Logo';
 import { getNavigationLinks } from '../utils/menu';
+import Link from 'next-intl/link';
+import { useTranslations } from 'next-intl';
 
 export function MainNavigation() {
+  const t = useTranslations('Navigation');
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
 
@@ -31,24 +36,34 @@ export function MainNavigation() {
   };
 
   return (
-    <AppBar position="sticky">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <header className="header sticky top-0 w-full flex flex-row justify-center py-2 px-8 bg-neutral-50">
+      <div className="flex flex-row justify-center items-center w-full max-w-7xl">
+        <div className="flex justify-start items-center w-1/4 grow">
           <Logo />
+        </div>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {menuItems.map((item) => (
-              <Button
-                key={item.link}
-                onClick={() => navigateToPage(item.link)}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {item.title}
-              </Button>
-            ))}
-          </Box>
+        <div className="xl:flex hidden w-2/4 flex-row space-x-5 justify-center items-center">
+          {menuItems.map((item) => (
+            <Link
+              className="text-lg uppercase font-medium hover:text-sky-600"
+              key={item.title}
+              href={item.link}
+            >
+              {item.title}
+            </Link>
+          ))}
+          <Button
+            component={Link}
+            href="/help"
+            variant="contained"
+            startIcon={<VolunteerActivismIcon />}
+          >
+            {t('HelpNow')}
+          </Button>
+        </div>
 
-          <Box sx={{ flexGrow: 1, justifyContent: 'end', display: { xs: 'flex', md: 'none' } }}>
+        <div className="w-1/4 flex justify-end">
+          <div className="xl:hidden flex ">
             <Button
               sx={{ p: 0 }}
               size="large"
@@ -74,20 +89,27 @@ export function MainNavigation() {
               }}
               open={Boolean(anchorElementNavigation)}
               onClose={handleCloseNavigationMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
             >
               {menuItems.map((item) => (
-                <MenuItem key={item.link} onClick={() => navigateToPage(item.link)}>
-                  <Typography textAlign="center">{item.title}</Typography>
+                <MenuItem key={item.title} onClick={() => navigateToPage(item.link)}>
+                  {item.title}
                 </MenuItem>
               ))}
+              <Divider />
+              <MenuItem key={t('HelpNow')} onClick={() => navigateToPage('/help')}>
+                <ListItemIcon>
+                  <VolunteerActivismIcon className="text-sky-600" />
+                </ListItemIcon>
+
+                <ListItemText>
+                  <div className="text-sky-600">{t('HelpNow')}</div>
+                </ListItemText>
+              </MenuItem>
             </Menu>
-          </Box>
+          </div>
           <LanguageSwitcher />
-        </Toolbar>
-      </Container>
-    </AppBar>
+        </div>
+      </div>
+    </header>
   );
 }

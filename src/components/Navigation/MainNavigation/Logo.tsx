@@ -1,26 +1,13 @@
-import { Typography } from '@mui/material';
-import AdbIcon from '@mui/icons-material/Adb';
+import AdbIcon from "@mui/icons-material/Adb"
+import Link from "next-intl/link"
 
 export default function Logo() {
   return (
     <>
-      <AdbIcon sx={{ mr: 1 }} />
-      <Typography
-        variant="h6"
-        noWrap
-        component="a"
-        href="/"
-        sx={{
-          mr: 2,
-          fontFamily: 'monospace',
-          fontWeight: 700,
-          letterSpacing: '.3rem',
-          color: 'inherit',
-          textDecoration: 'none',
-        }}
-      >
-        LOGO
-      </Typography>
+      <Link className="text-2xl flex flex-row items-center" href="./">
+        <img className="h-14 pr-2" src="./logos/logo.png" />
+        <span>Amahoro Kids</span>
+      </Link>
     </>
-  );
+  )
 }
