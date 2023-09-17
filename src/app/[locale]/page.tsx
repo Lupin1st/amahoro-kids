@@ -10,7 +10,26 @@ export default function IndexPage() {
   return (
     <>
       <div className="w-full flex flex-col items-center space-y-5">
-        <HomeIntro />
+      <Carousel className="w-full" 
+          height={400}
+          fullHeightHover={true}
+          animation="fade"
+          interval={7000}
+          duration={2000}
+          navButtonsAlwaysVisible={true}
+          indicators={true}
+          sx={{
+            backgroundColor: 'rgba(33, 123, 179, 0.1)',
+          }}
+        >
+          <img src="/sliders/project_1.jpg" style={{marginLeft:"auto",marginRight:"auto"}} />
+          <img src="/sliders/project_2.jpg" style={{marginLeft:"auto",marginRight:"auto"}} />
+          <img src="/sliders/project_3.jpg" style={{marginLeft:"auto",marginRight:"auto"}} />
+          <img src="/sliders/project_4.jpg" style={{marginLeft:"auto",marginRight:"auto"}} />
+          <img src="/sliders/project_5.jpg" style={{marginLeft:"auto",marginRight:"auto"}} />
+
+        </Carousel>
+
         <HomeBlocks />
         <Carousel
           className="w-2/3 h-auto"
