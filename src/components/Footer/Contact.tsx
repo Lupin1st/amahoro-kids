@@ -10,7 +10,7 @@ export default function Contact() {
   const t = useTranslations('Contact');
 
   return (
-    <div className="lg:w-1/4 lg:pt-0 pt-5 w-full flex flex-col items-center">
+    <div className="lg:w-auto lg:pt-0 pt-5 w-full flex flex-col items-center">
       <h4 className=" text-2xl pb-2">{t('Contact')}</h4>
       <table>
         <tbody>

@@ -8,7 +8,7 @@ export default function HelpNow() {
   const t = useTranslations('HelpNow');
 
   return (
-    <div className="lg:w-1/4 w-full ">
+    <div className="lg:w-auto w-full">
       <div className="flex flex-col justify-center items-center pb-2">
         <div className="flex flex-row justify-center items-center pb-5">
           <img className="w-20 h-20" src="/logos/amahoro_kids_logo_round.png" />
