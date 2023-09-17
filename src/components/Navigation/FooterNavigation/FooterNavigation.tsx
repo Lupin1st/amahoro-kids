@@ -9,7 +9,7 @@ export function FooterNavigation() {
   const menuItems = getNavigationLinks();
 
   return (
-    <div className="lg:w-1/4 lg:pt-0 pt-5 w-full flex flex-col items-center">
+    <div className="lg:w-auto lg:pt-0 pt-5 w-full flex flex-col items-center">
       <h4 className="text-2xl pb-2">{t('Links')}</h4>
 
       {menuItems.map((item) => (
