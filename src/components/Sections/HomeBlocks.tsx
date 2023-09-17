@@ -1,4 +1,5 @@
 import Block from '@/components/Block/Block';
+import './styles.css';
 
 import { useTranslations } from "next-intl";
 
