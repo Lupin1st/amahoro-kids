@@ -1,8 +1,5 @@
 'use client';
 
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import PhoneIcon from '@mui/icons-material/Phone';
-import EmailIcon from '@mui/icons-material/Email';
 import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 import { Button } from '@mui/material';
@@ -20,7 +17,7 @@ export default function HelpNow() {
             <span className=" text-lg">{t('HelpForChildrenInRwanda')}</span>
           </div>
         </div>
-        <Button variant="contained" size="large">
+        <Button component={Link} href="/help" variant="contained" size="large">
           {t('HelpNowButtonText')}
         </Button>
       </div>

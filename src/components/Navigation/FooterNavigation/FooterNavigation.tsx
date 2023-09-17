@@ -13,7 +13,7 @@ export function FooterNavigation() {
       <h4 className="text-2xl pb-2">{t('Links')}</h4>
 
       {menuItems.map((item) => (
-        <Link key={item.title} className="hover:font-bold" href={{ pathname: item.link }}>
+        <Link key={item.title} className="hover:text-sky-600" href={{ pathname: item.link }}>
           {item.title}
         </Link>
       ))}

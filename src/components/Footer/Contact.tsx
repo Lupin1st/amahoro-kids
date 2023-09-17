@@ -19,7 +19,7 @@ export default function Contact() {
               <EmailIcon />
             </td>
             <td>
-              <Link className="hover:font-bold" href="mailto:info@amahorokids.com">
+              <Link className="hover:text-sky-600" href="mailto:info@amahorokids.com">
                 info@amahorokids.com
               </Link>
             </td>
