@@ -46,5 +46,11 @@
     "school_paragraph": "Short text about the school.",
     "community_paragraph": "Short text about the community.",
     "current_projects_paragraph": "Text about the current projects."
+  },
+  "IndexPage": {
+    "HelpNow": "Spenden",
+    "AboutUs": "About us",
+    "DiscoverMore": "Discover more"
   }
+  
 }
