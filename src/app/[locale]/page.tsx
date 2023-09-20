@@ -54,7 +54,7 @@ export default function IndexPage() {
               variant="contained"
               startIcon={<AgricultureIcon />}
             >
-              {t('DiscoverMore')}
+              {t('LearnMore')}
             </Button>
           </div>
         </div>
