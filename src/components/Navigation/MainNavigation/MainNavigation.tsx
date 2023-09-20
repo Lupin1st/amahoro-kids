@@ -36,7 +36,7 @@ export function MainNavigation() {
   };
 
   return (
-    <header className="header sticky top-0 w-full flex flex-row justify-center py-2 px-8 bg-neutral-50">
+    <header className="header sticky top-0 z-10 w-full flex flex-row justify-center py-2 px-8 bg-neutral-50">
       <div className="flex flex-row justify-center items-center w-full max-w-7xl">
         <div className="flex justify-start items-center w-1/4 grow">
           <Logo />

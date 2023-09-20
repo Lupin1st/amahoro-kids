@@ -11,7 +11,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <Card variant="outlined" sx={{ maxWidth: 345 }}>
+    <Card className="m-3" variant="outlined" sx={{ maxWidth: 345 }}>
       <CardMedia sx={{ height: 200 }} image={props.image} title={props.imageTitle} />
       <CardContent>
         <h3 className="text-3xl pb-3">{props.title}</h3>
