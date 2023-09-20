@@ -39,12 +39,12 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   const messages = await getMessages(locale);
 
   return (
-    <html className="h-full" lang={locale}>
-      <body className="flex h-full flex-col">
+    <html lang={locale}>
+      <body className="flex flex-col">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeRegistry>
             <MainNavigation />
-            <main className="p-5">{children}</main>
+            <main>{children}</main>
             <Footer />
           </ThemeRegistry>
         </NextIntlClientProvider>

@@ -32,6 +32,16 @@
     "HelpForChildrenInRwanda": "Hilfe für Kinder in Ruanda",
     "HelpNowButtonText": "Jetzt Spenden"
   },
+  "MainPage": {
+    "OrganisationTitle": "Verein Amahoro Kids",
+    "OrganisationSubtitle": "Hilfe für die ärmsten Kinder in der Region Janja in Ruanda.",
+    "MissionTitle": "Unsere Mission",
+    "MissionDescription": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+    "RwandaTitle": "Ruanda",
+    "RwandaSubtitle": "Land der tausend Hügel.",
+    "ProjectsTitle": "Projekte",
+    "ProjectsSubtitle": "Jedes Kind verdient einen Zugang zu Bildung und die Chance ein selbstständiges Leben zu führen."
+  },
   "HomeIntro": {
     "title": "AMAHORO Kids",
     "title_2": "Children of the peace",
