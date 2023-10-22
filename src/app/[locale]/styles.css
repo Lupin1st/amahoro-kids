@@ -1,0 +1,5 @@
+.max-height-div {
+  max-height: 500px;
+  width: 100%;
+  overflow: hidden;
+}
