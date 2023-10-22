@@ -21,7 +21,7 @@ export default function IndexPage() {
     <div className="w-full flex flex-col items-center pb-12">
       <Carousel
         className="w-full"
-        height={500}
+        height={400}
         fullHeightHover={true}
         animation="fade"
         interval={7000}
@@ -102,9 +102,7 @@ export default function IndexPage() {
       <div className="max-w-7xl flex flex-col items-center space-y-12 p-8">
         <Section>
           <img className="pb-5" src="/logos/logo_text.png" />
-          <SectionHeader title={t('OrganisationTitle')} subtitle={t('OrganisationSubtitle')} />
-
-          <SubSectionHeader title={t('MissionTitle')} />
+          <SectionHeader title={t('MissionTitle')} subtitle={t('MissionSubtitle')} />
           <p>{t('MissionDescription')}</p>
         </Section>
 
