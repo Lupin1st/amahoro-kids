@@ -1,13 +1,13 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia } from '@mui/material';
 import { ReactNode } from 'react';
 
-type ProjectCardProps = {
+interface ProjectCardProps {
   image: string;
   imageTitle: string;
   title: string;
   actionLink: string;
-  children: ReactNode;
-};
+  children?: ReactNode | ReactNode[];
+}
 
 export default function ProjectCard(props: ProjectCardProps) {
   return (

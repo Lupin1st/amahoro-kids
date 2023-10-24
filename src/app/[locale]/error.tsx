@@ -3,10 +3,10 @@
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 
-type Props = {
+interface Props {
   error: Error;
   reset(): void;
-};
+}
 
 export default function Error({ error, reset }: Props) {
   const t = useTranslations('Error');

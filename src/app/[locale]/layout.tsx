@@ -5,10 +5,10 @@ import { MainNavigation } from '@/components/Navigation/MainNavigation/MainNavig
 import ThemeRegistry from '@/components/ThemeRegistry/ThemeRegistry';
 import Footer from '@/components/Footer/Footer';
 
-type Props = {
-  children: ReactNode;
+interface Props {
+  children?: ReactNode | ReactNode[];
   params: { locale: string };
-};
+}
 
 async function getMessages(locale: string) {
   try {

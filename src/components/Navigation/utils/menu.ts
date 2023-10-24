@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
 
-export type MenuItem = {
+export interface MenuItem {
   link: string;
   title: string;
-};
+}
 
 export function getNavigationLinks(): MenuItem[] {
   const t = useTranslations('Navigation');

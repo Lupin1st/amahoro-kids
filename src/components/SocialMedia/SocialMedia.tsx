@@ -13,7 +13,11 @@ export default function SocialMedia() {
     <div className="flex flex-row space-x-2 justify-center pt-5">
       <Link href="https://www.facebook.com/amahorokids/" target="_blank" rel="noopener noreferrer">
         <Tooltip title={t('Facebook')} placement="top">
-          <FacebookIcon fontSize="medium" titleAccess={t('Facebook')} />
+          <FacebookIcon
+            className="hover:text-sky-600"
+            fontSize="medium"
+            titleAccess={t('Facebook')}
+          />
         </Tooltip>
       </Link>
 
@@ -23,7 +27,11 @@ export default function SocialMedia() {
         rel="noopener noreferrer"
       >
         <Tooltip title={t('Instagram')} placement="top">
-          <InstagramIcon fontSize="medium" titleAccess={t('Instagram')} />
+          <InstagramIcon
+            className="hover:text-sky-600"
+            fontSize="medium"
+            titleAccess={t('Instagram')}
+          />
         </Tooltip>
       </Link>
     </div>

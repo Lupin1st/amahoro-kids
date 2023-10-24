@@ -2,15 +2,11 @@
 
 import ProjectCard from '@/components/ProjectCard/ProjectCard';
 import { useTranslations } from 'next-intl';
-import HomeIntro from '@/components/Sections/HomeIntro';
 import HomeBlocks from '@/components/Sections/HomeBlocks';
-import Carousel from 'react-material-ui-carousel';
-import { Button } from '@mui/material';
-import Link from 'next-intl/link';
-import Section from '@/components/Section/Section';
-import SectionHeader from '@/components/Headers/SectionHeader';
-import SubSectionHeader from '@/components/Headers/SubSectionHeader';
+import Section from '@/components/Layout/Section/Section';
+import SectionHeader from '@/components/Layout/Headers/SectionHeader';
 import MainSlider from '@/components/MainSlider/MainSlider';
+import CenterPage from '@/components/Layout/PageLayout/CenterPage';
 
 export default function IndexPage() {
   const t = useTranslations('MainPage');
@@ -19,9 +15,9 @@ export default function IndexPage() {
     <div className="w-full flex flex-col items-center pb-12">
       <MainSlider></MainSlider>
 
-      <div className="max-w-7xl flex flex-col items-center space-y-12 p-8">
+      <CenterPage>
         <Section>
-          <img className="pb-5" src="/logos/logo_text.png" />
+          <img className="pb-5" src="./logos/logo_text.png" />
           <SectionHeader title={t('MissionTitle')} subtitle={t('MissionSubtitle')} />
           <p>{t('MissionDescription')}</p>
         </Section>
@@ -91,7 +87,7 @@ export default function IndexPage() {
             </ProjectCard>
           </div>
         </Section>
-      </div>
+      </CenterPage>
 
       <HomeBlocks />
     </div>
