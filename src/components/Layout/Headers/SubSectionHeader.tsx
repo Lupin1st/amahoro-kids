@@ -1,6 +1,6 @@
-export type SubSectionHeaderProps = {
+export interface SubSectionHeaderProps {
   title: string;
-};
+}
 
 export default function SubSectionHeader({ title }: SubSectionHeaderProps) {
   return (

@@ -1,9 +1,9 @@
 import './styles.css';
 
-export type SectionHeaderProps = {
+export interface SectionHeaderProps {
   title: string;
   subtitle?: string;
-};
+}
 
 export default function SectionHeader({ title, subtitle }: SectionHeaderProps) {
   return (
